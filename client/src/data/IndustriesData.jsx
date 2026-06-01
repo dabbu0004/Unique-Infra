@@ -8,6 +8,9 @@ import solar from "../assets/industries/solar.webp";
 import tunnel from "../assets/industries/tunnel.webp";
 import wind from "../assets/industries/wind.webp";
 import saatvikOffer from "../assets/brandsProducts/saatvik/saatvik1.webp";
+import solarCable from "../assets/brandsProducts/kei/Rubber Cables (Rubber Flexible Cables).webp";
+import solarElectricComponents from "../assets/brandsProducts/phoenix/Electronics housings.webp";
+import solarInverter from "../assets/brandsProducts/phoenix/Industrial communication.webp";
 
 import {
   FaSolarPanel,
@@ -48,13 +51,22 @@ import {
   MdOutlineCable,
   MdCable,
   MdElectricMeter,
+  MdOutlinePlumbing,
+  MdElectricBolt,
+  MdComputer,
+  MdSpeed,
+  MdBatteryChargingFull,
+  MdLightbulbOutline,
   MdOutlinePriceCheck,
   MdSupportAgent,
   MdOutlineEnergySavingsLeaf
 } from "react-icons/md";
 
 import { TbSolarPanel2, TbTruckDelivery, TbWorldUpload } from "react-icons/tb";
-import { BsLightningChargeFill, BsBoxSeam, BsBuildingFillGear } from "react-icons/bs";
+import { BsLightningChargeFill, BsBoxSeam, BsBuildingFillGear, BsClipboardCheck, BsServer, BsSpeedometer } from "react-icons/bs";
+import { GiValve } from "react-icons/gi";
+import { TbPropeller } from "react-icons/tb";
+import { FaTools } from "react-icons/fa";
 
 const IndustriesData = [
   {
@@ -147,38 +159,24 @@ const IndustriesData = [
         desc: "Reliable and durable wiring is crucial for solar efficiency. We provide complete range of solar cables designed for long life and high performance.",
         icon: MdOutlineCable,
         features: ["DC Solar Cables", "AC Solar Cables", "Flexible Cables", "UV Resistant Cables", "Armored Cables"],
-        image: saatvikOffer
+        image: solarCable
       },
       {
         title: "Electrical Components & Accessories",
         desc: "Complete range of electrical components to ensure safety, efficiency and long-term performance.",
         icon: FiSettings,
         features: ["Lugs & Glands", "Cable Trays", "Junction Boxes", "Earthing Materials", "Lightning Arrestors", "Conduits & Accessories"],
-        image: saatvikOffer
+        image: solarElectricComponents
       },
       {
         title: "Inverters & Protection Solutions",
         desc: "Advanced inverters and protection devices for smooth energy conversion and system safety.",
         icon: FiCpu,
         features: ["String Inverters", "On-Grid Inverters", "Hybrid Inverters", "SPDs & Fuses", "AC/DC Combiner Boxes"],
-        image: saatvikOffer
+        image: solarInverter
       }
     ],
-    whyChooseUs: [
-      { icon: FiBox, title: "Ready Stock Availability" },
-      { icon: FiAward, title: "Authorized Premium Partner Brands" },
-      { icon: FiTruck, title: "Fast Delivery & Turnaround" },
-      { icon: FiGrid, title: "Wide Product Range" },
-      { icon: FaShieldAlt, title: "Trusted by Industry Leaders" },
-      { icon: MdOutlinePriceCheck, title: "Competitive Pricing" }
-    ],
-    whereUsed: [
-      { image: solar, label: "Residential Rooftops" },
-      { image: solar, label: "Commercial Buildings" },
-      { image: solar, label: "Industrial Projects" },
-      { image: solar, label: "Solar Farms" },
-      { image: solar, label: "Government Projects" }
-    ],
+
     cta: {
       title: "Ready to Go Solar?",
       highlight: "Go Solar?",
@@ -199,98 +197,194 @@ const IndustriesData = [
     description: "Innovative hydroelectric solutions harnessing the power of water for efficient energy production.",
     badges: ["RENEWABLE ENERGY", "INDUSTRIAL SUPPLY"],
     heroDesc: "We supply electrical, automation, and instrumentation products to hydropower plant construction and maintenance projects. Our product range supports EPC contractors and power utilities operating run-of-river and reservoir-based hydro plants.",
-    competencies: [ /* Keeping old data safe */ ],
+    competencies: [ /* Keeping old data safe */],
+
     // --- NEW LAYOUT FIELDS ---
-    heroTagline: "Innovative Solutions for",
+    heroTagline: "Powering a Sustainable Future with",
     heroHighlight: "Hydro Power",
-    heroSubtext: "We supply electrical, automation, and instrumentation products to hydropower plant construction and maintenance projects.",
+    heroSubtext: " We Offer Wide range of product used in Hydro Power.",
     featuresBar: [
-      { icon: FaWater, title: "RENEWABLE ENERGY" },
-      { icon: FiSettings, title: "INDUSTRIAL SUPPLY" }
+      { icon: FiTool, title: "Wide Range of Hydro Products" },
+      { icon: FiAward, title: "Trusted Quality" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" },
+      { icon: MdSupportAgent, title: "Expert Support" }
     ],
     aboutSection: {
       subtitle: "ABOUT OUR HYDRO SOLUTIONS",
       title: "End-to-End Hydro Power Solutions",
-      desc1: "Innovative hydroelectric solutions harnessing the power of water for efficient energy production.",
-      desc2: "Our product range supports EPC contractors and power utilities operating run-of-river and reservoir-based hydro plants.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Providing certified components for hydro plant operations.",
+      desc1: "At Unique Infra & Sustainable Power Pvt. Ltd., we provide end-to-end hydro power solutions with a wide range of industrial electrical products used in hydro power plant installations. From wires & cables, lugs & glands, AB/DB boxes, relays, connectors, terminal blocks, LV motors, LED lights, panels, and switchgears",
+      desc2: " we ensure ready stock availability for both small and bulk project requirements, delivering expert support for smooth and efficient hydro power operations.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "We supply all hydro components except civil & structural works.",
       image: hydro
     },
-    keyComponents: { items: [] }, // Empty as requested
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Hydro Plant Electrical Products",
-        desc: "Hydropower plants require robust electrical equipment to handle high output and challenging site conditions.",
-        icon: FiZap,
-        features: ["HT Cables & Switchgear", "Bus Ducts & Transformers"],
-        image: hydro
-      },
-      {
-        title: "Hydro Plant Automation Products",
-        desc: "Efficient hydro plant operation depends on precise control and monitoring systems.",
-        icon: FiActivity,
-        features: ["PLCs & DCS Hardware", "Flow & Pressure Sensors"],
-        image: hydro
-      }
-    ],
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN HYDRO POWER SYSTEMS",
+      title: "", // Left blank as per your image design
+      items: [
+        { icon: BsServer, label: "Control Panels" },
+        { icon: FiZap, label: "Switchgear" },
+        { icon: FaArchway, label: "Intake Gate Equipment" },
+        { icon: MdOutlinePlumbing, label: "Penstock Pipes & Accessories" },
+        { icon: GiValve, label: "Valves & Actuators" },
+        { icon: MdElectricBolt, label: "Excitation Systems" },
+        { icon: FiShield, label: "Protection Systems" },
+        { icon: MdComputer, label: "SCADA & Automation" },
+        { icon: MdSpeed, label: "Monitoring & Instrumentation" },
+        { icon: MdOutlineCable, label: "Cables & Wiring Systems" },
+        { icon: MdBatteryChargingFull, label: "DC Systems & Batteries" },
+        { icon: MdLightbulbOutline, label: "Lighting & Earthing Systems" },
+        { icon: TbPropeller, label: "Cooling & Ventilation Systems" },
+        { icon: BsSpeedometer, label: "Measuring Instruments" },
+        { icon: FaTools, label: "Tools & Installation Accessories" }
+      ]
+    },
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS FOR HYDRO PROJECTS",
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Wires & Cables",
+          image: hydro, // Replace with your actual cable image later
+          features: [
+            "HT & LT Power Cables",
+            "Control & Instrumentation Cables",
+            "Flexible & Marine Cables",
+            "Armoured & Unarmoured Cables",
+            "Custom Cable Solutions"
+          ]
+        },
+        {
+          title: "Control & Protection Systems",
+          image: hydro, // Replace with your actual systems image later
+          features: [
+            "Automation Panels",
+            "AB/DB Boxes",
+            " Lighting and Earthing Solution",
+            "Distribution Boxes",
+            "Lugs and Glands "
+
+          ]
+        },
+        {
+          title: "Electrical Components & Accessories",
+          image: hydro, // Replace with your actual accessories image later
+          features: [
+            "MCBs, MCCBs & ACBs",
+            "Contactors & Relays",
+            "Terminal Blocks & Connectors",
+            "Cable Glands, Lugs & Ferrules",
+            "Wiring Accessories"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Ready for",
-      highlight: "Hydro Power?",
-      desc: "Get comprehensive solutions from a trusted supplier for your next big project.",
-      features: [
-        { icon: FaCheckCircle, title: "Quality Assured" },
-        { icon: TbTruckDelivery, title: "Fast Delivery" }
-      ]
-    }
+    cta: null
   },
-  {
+{
     id: "wind-energy",
     image: wind,
     icon: FaWind,
     title: "Wind Energy",
     description: "Cutting-edge wind energy systems designed to capture natural wind power for a sustainable tomorrow.",
     badges: ["WIND POWER", "PRODUCT DISTRIBUTOR"],
-    heroDesc: "We supply specialized electrical, instrumentation, and automation products required for onshore and offshore wind energy projects. Our portfolio supports wind farm developers, EPC contractors, and OEMs with reliable and certified components.",
-    competencies: [ /* Keeping old data safe */ ],
-    // --- NEW LAYOUT FIELDS ---
-    heroTagline: "Empowering Projects with",
+    heroTagline: "Powering a Sustainable Future with",
     heroHighlight: "Wind Energy",
-    heroSubtext: "We supply specialized electrical, instrumentation, and automation products required for onshore and offshore wind energy projects.",
+    heroSubtext: "Unique Infra provides a complete range of industrial electrical products used in wind power projects. We support wind energy infrastructure with reliable products, ready stock availability, fast delivery, and pan-India supply support.",
     featuresBar: [
       { icon: FaWind, title: "WIND POWER" },
-      { icon: FiBox, title: "PRODUCT DISTRIBUTOR" }
+      { icon: FiBox, title: "PRODUCT DISTRIBUTOR" },
+      { icon: TbTruckDelivery, title: "PAN INDIA DELIVERY" },
+      { icon: MdSupportAgent, title: "EXPERT SUPPORT" }
     ],
     aboutSection: {
       subtitle: "ABOUT OUR WIND SOLUTIONS",
       title: "Comprehensive Wind Energy Supply",
-      desc1: "Cutting-edge wind energy systems designed to capture natural wind power for a sustainable tomorrow.",
-      desc2: "Our portfolio supports wind farm developers, EPC contractors, and OEMs with reliable and certified components.",
-      calloutIcon: FaCheckCircle,
+      desc1: "Unique Infra & Sustainable Power Pvt. Ltd. is a trusted industrial electrical products supplier serving wind power projects across India. We offer a wide range of products including wires & cables, industrial automation solutions, lugs & glands, protection systems, industrial lighting, and LV motors. With ready stock, fast delivery, and expert support, we help industries maintain reliable and efficient operations.",
+      desc2: "With ready stock, fast delivery, and expert support, we help wind energy projects maintain reliable and efficient operations across India.",
+      calloutIcon: BsClipboardCheck,
       calloutText: "Certified components for turbine and substation needs.",
       image: wind
     },
-    keyComponents: { items: [] }, // Empty as requested
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN WIND POWER SYSTEMS",
+      title: "",
+      items: [
+        { icon: MdOutlineCable, label: "Wire & Cables" },
+        { icon: MdComputer, label: "Industrial Automation" },
+        { icon: MdElectricMeter, label: "Distribution Panels" },
+        { icon: FaShieldAlt, label: "Earthing Materials" },
+        { icon: BsLightningChargeFill, label: "Lightning Protection" },
+        { icon: FiSettings, label: "Lugs & Glands" },
+        { icon: BsBoxSeam, label: "Junction Boxes" },
+        { icon: MdOutlineCable, label: "Connectors & Terminal Blocks" },
+        { icon: FiShield, label: "Relays & MCBs" },
+        { icon: FiGrid, label: "Cable Trays" },
+        { icon: FiTool, label: "LV Motors" },
+        { icon: MdLightbulbOutline, label: "Industrial Lighting" }
+      ]
+    },
+    windOfferings: {
+      subtitle: "WIND ELECTRICAL PRODUCTS WE OFFER",
+      title: "High Performance Electrical Products for Wind Projects",
+      topCards: [
+        {
+          icon: FiCpu,
+          title: "1. Automation & Control",
+          features: ["PLC Modules", "Relays", "SMPS", "Interface Modules", "Industrial Connectors", "Terminal Blocks", "Surge Protection Devices", "Monitoring Systems", "Communication Interfaces"],
+          image: wind, // Replace with your Phoenix product image
+          brandLogos: [wind] // Replace with Phoenix logo import
+        },
+        {
+          icon: FiShield,
+          title: "2. Protection & Distribution",
+          features: ["MCBs", "Distribution Boards", "Junction Boxes", "Surge Protection Devices", "Earthing Systems", "Communication Interfaces","Lightning Protection Systems","Cable Trays"],
+          image: wind, // Replace with distribution product image
+          brandLogos: [wind, wind] // Replace with Dowells, HEX logo imports
+        },
+        {
+          icon: MdLightbulbOutline,
+          title: "3. Motors & Lighting",
+          features: ["LV Motors", "Industrial Lighting", "Highmast Lights","Control Gear", "Accessories"],
+          image: wind, // Replace with Motor/Light product image
+          brandLogos: [wind, wind] // Replace with Innomotics, Bajaj logo imports
+        }
+      ],
+      bottomCards: [
+        {
+          num: "01",
+          title: "Wire & Cable Solutions",
+          desc: "Reliable and durable wiring solutions are essential for efficient wind power generation, transmission, and turbine operations. We supply a complete range of industrial wire and cable solutions suitable for wind energy infrastructure and harsh environmental conditions.",
+          features: ["HT & LT Power Cables", "Control & Instrumentation Cables", "Flexible & Marine Cables", "Armoured & Unarmoured Cables"],
+          image: wind, // Replace with Cable product image
+          brandLogos: [wind] // Replace with KEI logo import
+        },
+        {
+          num: "02",
+          title: "Industrial Automation & Control Solutions",
+          desc: "Modern wind power systems require advanced automation and control solutions for monitoring, protection, and operational efficiency. We supply reliable automation products for wind turbine and substation applications.",
+          features: ["PLC Modules", "Relays", "SMPS", "Interface Modules", "Monitoring Systems"],
+          image: wind, // Replace with Automation product image
+          brandLogos: [wind] // Replace with Phoenix logo import
+        },
+        {
+          num: "03",
+          title: "Electrical Components & Protection Systems",
+          desc: "We supply a complete range of electrical components and safety solutions used in wind energy projects to ensure reliable power distribution and system protection.",
+          features: ["MCBs & MCCBs", "Distribution Boards", "Junction Boxes", "Surge Protection Devices", "Earthing Systems"],
+          image: wind, // Replace with Components product image
+          brandLogos: [wind, wind] // Replace with Dowells, HEX logo imports
+        }
+      ]
+    },
+    detailedSolutions: [],
     specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Electrical Supply for Wind Turbines",
-        desc: "Wind turbines operate in harsh environments and demand highly durable electrical components.",
-        icon: FiWind,
-        features: ["MV Switchgear & Cables", "Earthing & Protection"],
-        image: wind
-      },
-      {
-        title: "SCADA & Monitoring Products",
-        desc: "Efficient wind farm management depends on accurate data collection and remote monitoring.",
-        icon: FiActivity,
-        features: ["Sensors & Anemometers", "Communication Equipment"],
-        image: wind
-      }
-    ],
     whyChooseUs: [],
     whereUsed: [],
     cta: {
@@ -303,7 +397,7 @@ const IndustriesData = [
       ]
     }
   },
-  {
+{
     id: "data-centers",
     image: dataCenter,
     icon: FaServer,
@@ -312,48 +406,116 @@ const IndustriesData = [
     badges: ["IT INFRASTRUCTURE", "CRITICAL SUPPLY"],
     heroDesc: "We supply precision power, cooling, and structured cabling products for data center construction and fit-out projects.",
     competencies: [],
-    heroTagline: "Critical Infrastructure for",
-    heroHighlight: "Data Centers",
-    heroSubtext: "Precision power, cooling, and structured cabling products for data center construction.",
+    
+    // --- NEW LAYOUT FIELDS ---
+    heroTagline: "Powering Infrastructure for",
+    heroHighlight: "Data Centres",
+    heroSubtext: "Complete range of industrial electrical products used in Data Centres projects.\nWe support projects with Genuine products, ready stock availability, fast delivery, and pan-India supply support.",
     featuresBar: [
       { icon: FaServer, title: "IT INFRASTRUCTURE" },
-      { icon: FiShield, title: "CRITICAL SUPPLY" }
+      { icon: FiShield, title: "CRITICAL SUPPLY" },
+      { icon: FiBox, title: "READY STOCK" },
+      { icon: TbTruckDelivery, title: "PAN INDIA DELIVERY" },
+      { icon: MdSupportAgent, title: "EXPERT SUPPORT" }
     ],
     aboutSection: {
-      subtitle: "ABOUT DATA CENTER SOLUTIONS",
-      title: "State-of-the-art infrastructure supply",
-      desc1: "Ensuring optimal performance, security, and scalability for your IT infrastructure.",
-      desc2: "Our distribution portfolio supports hyperscale, enterprise, and colocation data center developers with certified, high-reliability components.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Mission-Critical Power & Data Supply",
+      subtitle: "ABOUT OUR DATA CENTRE SOLUTIONS",
+      title: "End to end data Centres power Solution",
+      desc1: "Unique Infra is India's trusted industrial electrical distributor, specializing in end-to-end power solutions for data centers.",
+      desc2: "As authorized stockists for top power brands, we ensure 100% genuine products, expert technical support, and seamless Pan-India delivery. Partner with us to guarantee uninterrupted efficiency for your critical data infrastructure.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "We supply complete range of industrial electrical products used in Data Centres.",
       image: dataCenter
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Data Center Power Products",
-        desc: "Data centers demand the highest level of power reliability.",
-        icon: FiZap,
-        features: ["UPS & Static Transfer", "PDUs & Busbar Trunking"],
-        image: dataCenter
-      },
-      {
-        title: "Structured Cabling Products",
-        desc: "High-performance data centers rely on robust structured cabling infrastructure.",
-        icon: FiDatabase,
-        features: ["Fiber Optic & Copper", "Cable Management"],
-        image: dataCenter
-      }
-    ],
+    keyComponents: {
+      subtitle: "KEY COMPONENTS",
+      title: "", // Left blank as per your clean design style
+      items: [
+        { icon: MdOutlineCable, label: "Wire & Cables" },
+        { icon: MdComputer, label: "Industrial Automation" },
+        { icon: FiZap, label: "Distribution Boards" },
+        { icon: FiShield, label: "Protection Devices" },
+        { icon: FiGrid, label: "Cable Management" },
+        { icon: FaShieldAlt, label: "Earthing Materials" },
+        { icon: FiSettings, label: "Lugs & Glands" },
+        { icon: BsBoxSeam, label: "Junction Boxes" },
+        { icon: MdOutlineCable, label: "Connectors & Terminal Blocks" },
+        { icon: MdLightbulbOutline, label: "Industrial Lighting" },
+        { icon: TbPropeller, label: "Cooling Infrastructure" }
+      ]
+    },
+    specialOfferings: {
+      subtitle: "SECTION WISE PRODUCTS",
+      title: "Key Electrical Products Used in Data Centres",
+      desc: "",
+      cards: [
+        {
+          title: "1. Wire & Cable Solutions",
+          image: dataCenter, // Replace with actual cable image
+          features: [
+            "HT & LT Power Cables", 
+            "Control & Flexible Cables", 
+            "FRLS & XLPE Cables", 
+            "Armoured & Single/Multi-Core"
+          ]
+        },
+        {
+          title: "2. Power Distribution & Protection",
+          image: dataCenter, // Replace with actual distribution image
+          features: [
+            "Distribution Boards (DB)", 
+            "MCBS & MCCBS", 
+            "Surge Protection Devices (SPD)", 
+            "Earthing & Lightning Protection"
+          ]
+        },
+        {
+          title: "3. Industrial Automation",
+          image: dataCenter, // Replace with actual automation image
+          features: [
+            "PLC Modules", 
+            "Interface Relays & SMPS", 
+            "Monitoring Systems", 
+            "Communication Interfaces"
+          ]
+        },
+        {
+          title: "4. Connectors & Accessories",
+          image: dataCenter, // Replace with actual accessories image
+          features: [
+            "Lugs & Cable Glands", 
+            "Connectors", 
+            "Terminal Blocks", 
+            "Ferrules & Wiring Accessories"
+          ]
+        },
+        {
+          title: "5. Cooling Infrastructure",
+          image: dataCenter, // Replace with actual cooling image
+          features: [
+            "Industrial Fans", 
+            "Exhaust Systems", 
+            "HVAC Electrical Components", 
+            "LV Motors (AHU, pumps, etc.)"
+          ]
+        },
+        {
+          title: "6. Industrial Lighting",
+          image: dataCenter, // Replace with actual lighting image
+          features: [
+            "LED Industrial Lights", 
+            "Highmast Lights", 
+            "Utility Lighting", 
+            "Emergency Lighting Solutions"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Building a",
-      highlight: "Data Center?",
-      desc: "Contact us for critical supply solutions.",
-      features: []
-    }
+    cta: null
   },
   {
     id: "tunnel",

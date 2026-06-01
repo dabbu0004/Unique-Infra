@@ -48,7 +48,7 @@ const EachSegmentHero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 w-full  md:mt-34 md:ml-10 max-w-8xl mx-auto px-4 md:px-8  text-[#004068]">
+        <div className="relative z-10 w-full md:mt-34 md:ml-10 max-w-8xl mx-auto px-4 md:px-8 text-[#004068]">
           <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight max-w-4xl">
             {currentSegment.heroTagline}{" "}
             <span className="text-[#5c903a]">{currentSegment.heroHighlight}</span>
@@ -60,7 +60,7 @@ const EachSegmentHero = () => {
             <button className="bg-[#5c903a] hover:bg-[#4a7a2e] text-white px-8 py-4 rounded-md font-bold transition-all shadow-lg flex items-center gap-2 text-lg">
               Get a Quote <span className="text-xl">›</span>
             </button>
-            <button className="bg- backdrop-blur-sm border border-[#004068] hover:bg-[#004068] cursor-pointer hover:text-white text-[#004068] px-8 py-4 rounded-md font-bold transition-all shadow-lg text-lg">
+            <button className="bg-transparent backdrop-blur-sm border border-[#004068] hover:bg-[#004068] cursor-pointer hover:text-white text-[#004068] px-8 py-4 rounded-md font-bold transition-all shadow-lg text-lg">
               Contact Us
             </button>
           </div>
@@ -122,7 +122,7 @@ const EachSegmentHero = () => {
         </section>
       )}
 
-      {/* 4. KEY COMPONENTS GRID */}
+      {/* 4. KEY COMPONENTS GRID (Centered Wrap Update) */}
       {currentSegment.keyComponents && currentSegment.keyComponents.items.length > 0 && ( 
         <section className="py-16 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -131,14 +131,15 @@ const EachSegmentHero = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#004068] mb-12">
               {currentSegment.keyComponents.title}
-              <div className="w-16 h-1 bg-[#5c903a] mx-auto mt-4 rounded"></div>
+              {currentSegment.keyComponents.title && <div className="w-16 h-1 bg-[#5c903a] mx-auto mt-4 rounded"></div>}
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+            {/* Using flex-wrap and justify-center so incomplete rows perfectly center */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {currentSegment.keyComponents.items.map((item, idx) => {
                 const ItemIcon = item.icon;
                 return (
-                  <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-4 group">
+                  <div key={idx} className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] max-w-[240px] bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-4 group">
                     <div className="text-[#004068] group-hover:text-[#0b2136] transition-colors">
                       {ItemIcon && <ItemIcon className="text-5xl" />}
                     </div>
@@ -151,7 +152,93 @@ const EachSegmentHero = () => {
         </section>
       )}
 
-      {/* 5. SPECIAL OFFERINGS (e.g. Panels We Offer) */}
+      {/* --- CUSTOM WIND ENERGY 6-BOX LAYOUT --- */}
+      {currentSegment.windOfferings && (
+        <section className="py-20 max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#5c903a] font-bold tracking-widest uppercase text-sm mb-2 block">
+              {currentSegment.windOfferings.subtitle}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#004068] mb-4">
+              {currentSegment.windOfferings.title}
+            </h2>
+            <div className="w-16 h-1 bg-[#5c903a] mx-auto mt-4 rounded"></div>
+          </div>
+
+          {/* Top 3 Cards (List Style) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            {currentSegment.windOfferings.topCards.map((card, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col hover:-translate-y-1 transition-transform relative">
+                <div className="flex items-center gap-3 mb-6">
+                  {card.icon && <card.icon className="text-2xl text-[#5c903a] shrink-0" />}
+                  <h3 className="text-xl font-bold text-[#5c903a]">{card.title}</h3>
+                </div>
+                
+                <div className="flex-1 flex flex-row">
+                  <ul className="space-y-3 w-[60%]">
+                    {card.features.map((feat, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-800 font-medium">
+                        <FaCheckCircle className="text-[#5c903a] mt-[3px] text-xs shrink-0" />
+                        <span className="leading-tight">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="w-[40%] flex justify-end items-center pb-8">
+                    <img src={card.image} alt={card.title} className="w-full h-auto object-contain max-h-32 drop-shadow-sm" />
+                  </div>
+                </div>
+
+                {/* Brands Container at bottom */}
+                <div className="mt-4 flex gap-4 items-center pt-4 border-t border-gray-100">
+                  {card.brandLogos.map((logo, lIdx) => (
+                    <img key={lIdx} src={logo} alt="brand" className="h-6 object-contain" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom 3 Cards (Paragraph Style) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {currentSegment.windOfferings.bottomCards.map((card, idx) => (
+              <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col hover:-translate-y-1 transition-transform relative overflow-hidden">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#5c903a] text-white px-3 py-1 rounded text-sm font-bold shrink-0">{card.num}</span>
+                  <h3 className="text-lg md:text-xl font-bold text-[#004068] leading-tight pt-1">{card.title}</h3>
+                </div>
+                
+                <p className="text-sm text-gray-600 mb-5 flex-1 leading-relaxed">{card.desc}</p>
+
+                {card.features && card.features.length > 0 && (
+                  <div className="flex items-start gap-5 mb-6">
+                    <ul className="space-y-2 flex-1 min-w-0">
+                      {card.features.map((feature, featureIdx) => (
+                        <li key={featureIdx} className="flex items-start gap-2 text-sm text-gray-800 font-medium">
+                          <FaCheckCircle className="text-[#5c903a] mt-[3px] text-xs shrink-0" />
+                          <span className="leading-tight">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="w-28 shrink-0 flex justify-end pt-1">
+                      <img src={card.image} alt={card.title} className="w-full h-auto object-contain max-h-28 drop-shadow-sm" />
+                    </div>
+                  </div>
+                )}
+                
+                <div className="flex justify-between items-end mt-auto">
+                  <div className="flex gap-4 items-center w-1/2 pb-2">
+                    {card.brandLogos.map((logo, lIdx) => (
+                      <img key={lIdx} src={logo} alt="brand" className="h-6 object-contain" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 5. STANDARD SPECIAL OFFERINGS (e.g. Panels We Offer) */}
       {currentSegment.specialOfferings && (
         <section className="py-20 max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-8">
@@ -168,41 +255,19 @@ const EachSegmentHero = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {currentSegment.specialOfferings.cards.map((card, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-gray-200 flex flex-row p-5 md:p-6 transition-shadow items-stretch"
-              >
-                {/* Image on the Left */}
+              <div key={idx} className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-gray-200 flex flex-row p-5 md:p-6 transition-shadow items-stretch">
                 <div className="w-[35%] shrink-0 pr-4 flex justify-center items-center">
-                  <img 
-                    src={card.image} 
-                    alt={card.title} 
-                    className="w-full h-auto object-contain max-h-48 drop-shadow-sm" 
-                  />
+                  <img src={card.image} alt={card.title} className="w-full h-auto object-contain max-h-48 drop-shadow-sm" />
                 </div>
-
-                {/* Content on the Right */}
                 <div className="w-[65%] flex flex-col justify-center">
                   <h3 className="text-xl md:text-2xl font-bold text-[#004068] mb-2 leading-tight">
                     {card.title}
                   </h3>
-                  
-                  {/* Short green line under title */}
                   <div className="w-6 h-[2px] bg-[#5c903a] mb-4"></div>
-                  
                   <ul className="space-y-3">
                     {card.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-700 font-medium">
-                        {/* Thin gray checkmark from the image */}
-                        <svg 
-                          className="w-4 h-4 mt-[2px] text-gray-500 shrink-0" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24" 
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
-                        </svg>
+                        <svg className="w-4 h-4 mt-[2px] text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path></svg>
                         <span className="leading-tight">{feat}</span>
                       </li>
                     ))}
@@ -211,7 +276,6 @@ const EachSegmentHero = () => {
               </div>
             ))}
           </div>
-          
           <div className="text-center">
             <button className="bg-[#5c903a] hover:bg-[#4a7a2e] text-white px-8 py-3 rounded-md font-bold transition-all shadow-md inline-flex items-center gap-2">
               {currentSegment.specialOfferings.buttonText} <span className="text-xl">›</span>
@@ -220,7 +284,7 @@ const EachSegmentHero = () => {
         </section>
       )}
 
-    {/* 6. DETAILED SOLUTIONS COLUMNS */}
+      {/* 6. DETAILED SOLUTIONS COLUMNS */}
       {currentSegment.detailedSolutions && currentSegment.detailedSolutions.length > 0 && (
         <section className="py-8 bg-white">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -228,11 +292,7 @@ const EachSegmentHero = () => {
               {currentSegment.detailedSolutions.map((sol, idx) => {
                 const SolIcon = sol.icon;
                 return (
-                  <div 
-                    key={idx} 
-                    className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 flex flex-col hover:shadow-md transition-shadow"
-                  >
-                    {/* Icon and Title Row */}
+                  <div key={idx} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 flex flex-col hover:shadow-md transition-shadow">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="text-gray-600 shrink-0">
                         {SolIcon && <SolIcon className="text-4xl md:text-5xl" />}
@@ -241,104 +301,28 @@ const EachSegmentHero = () => {
                         {sol.title}
                       </h3>
                     </div>
-
-                    {/* Description Text */}
                     <p className="text-sm text-gray-600 mb-6 leading-relaxed">
                       {sol.desc}
                     </p>
-
-                    {/* Bottom Section: List (Left) & Product Image Box (Right) */}
                     <div className="flex justify-between items-end flex-1 mt-auto gap-2">
-                      
-                      {/* Features List */}
                       <ul className="space-y-3 z-10 w-[55%] pb-2">
                         {sol.features.map((feat, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-700 font-medium">
-                            {/* Thin circled checkmark matching the image */}
-                            <svg 
-                              className="w-[18px] h-[18px] mt-[2px] text-gray-500 shrink-0" 
-                              fill="none" 
-                              stroke="currentColor" 
-                              viewBox="0 0 24 24" 
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                            <svg className="w-[18px] h-[18px] mt-[2px] text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             <span className="leading-tight">{feat}</span>
                           </li>
                         ))}
                       </ul>
-
-                      {/* Product Image - No circle, contained in bottom right */}
                       {sol.image && (
                         <div className="w-[45%] h-32 md:h-40 flex items-end justify-end">
-                          <img 
-                            src={sol.image} 
-                            alt={sol.title} 
-                            className="max-w-full max-h-full object-contain object-bottom drop-shadow-md" 
-                          />
+                          <img src={sol.image} alt={sol.title} className="max-w-full max-h-full object-contain object-bottom drop-shadow-md" />
                         </div>
                       )}
-                      
                     </div>
                   </div>
                 );
               })}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* 7. WHY CHOOSE & WHERE USED */}
-      {(currentSegment.whyChooseUs?.length > 0 || currentSegment.whereUsed?.length > 0) && (
-        <section className="py-20 max-w-7xl  mx-auto px-4 md:px-8">
-          <div className="flex flex-col lg:flex-row gap-16">
-            
-            {/* Left: Why Choose */}
-            {currentSegment.whyChooseUs?.length > 0 && (
-              <div className="w-full lg:w-1/3">
-                <h2 className="text-3xl font-extrabold text-[#004068] mb-8 text-center lg:text-left">
-                  Why Choose Unique Infra?
-                </h2>
-                <div className="grid grid-cols-3 gap-y-8 gap-x-4">
-                  {currentSegment.whyChooseUs.map((item, idx) => {
-                    const WIcon = item.icon;
-                    return (
-                      <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-                        <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600">
-                          {WIcon && <WIcon className="text-2xl" />}
-                        </div>
-                        <h4 className="font-bold text-sm text-[#05111c]">{item.title}</h4>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* Right: Where Used */}
-            {currentSegment.whereUsed?.length > 0 && (
-              <div className="w-full lg:w-2/3">
-                <h2 className="text-3xl  font-extrabold text-[#004068] mb-8 text-center">
-                  Where Our Solutions Are Used
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {currentSegment.whereUsed.map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center text-center gap-4 group cursor-pointer">
-                      <div className="w-full aspect-square rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                        <img 
-                          src={item.image}  
-                          alt={item.label} 
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                        />
-                      </div>
-                      <span className="font-bold text-sm text-[#05111c] px-2">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
           </div>
         </section>
       )}
