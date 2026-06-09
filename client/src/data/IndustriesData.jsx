@@ -11,6 +11,7 @@ import saatvikOffer from "../assets/brandsProducts/saatvik/saatvik1.webp";
 import solarCable from "../assets/brandsProducts/kei/Rubber Cables (Rubber Flexible Cables).webp";
 import solarElectricComponents from "../assets/brandsProducts/phoenix/Electronics housings.webp";
 import solarInverter from "../assets/brandsProducts/phoenix/Industrial communication.webp";
+import evImage from "../assets/industries/EV.jpg"; // Update with your actual image path
 
 import {
   FaSolarPanel,
@@ -26,7 +27,11 @@ import {
   FaShieldAlt,
   FaBuilding,
   FaHome,
-  FaGlobeAmericas
+  FaGlobeAmericas,
+  FaLightbulb,
+  FaFan,
+  FaTrafficLight,
+  FaNetworkWired
 } from "react-icons/fa";
 
 import {
@@ -45,6 +50,7 @@ import {
   FiBox,
   FiTruck,
   FiAward
+  
 } from "react-icons/fi";
 
 import {
@@ -517,259 +523,653 @@ const IndustriesData = [
     whereUsed: [],
     cta: null
   },
-  {
+{
     id: "tunnel",
     image: tunnel,
     icon: FaArchway,
     title: "Tunnel",
     description: "Advanced tunneling solutions for infrastructure projects, ensuring safety and efficiency in underground construction.",
     badges: ["INFRASTRUCTURE", "SAFETY PRODUCTS"],
-    heroDesc: "We supply specialized electrical, safety, and automation products for tunnel construction and operation projects.",
-    competencies: [],
-    heroTagline: "Advanced Solutions for",
-    heroHighlight: "Tunnel Projects",
-    heroSubtext: "Specialized electrical, safety, and automation products for tunnel construction.",
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solutions",
+    heroHighlight: "for Tunnel Projects",
+    heroSubtext: "Safe. Reliable. Efficient. End-to-End electrical solutions for Road, Rail, Metro & Hydro Tunnels.\nPowering Infrastructure. Enabling Progress.",
+    
+    // --- FEATURES BAR ---
     featuresBar: [
-      { icon: FaArchway, title: "INFRASTRUCTURE" },
-      { icon: FiShield, title: "SAFETY PRODUCTS" }
+      { icon: FiShield, title: "Wide Range of Electrical Products" },
+      { icon: FiAward, title: "Trusted Quality" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" },
+      { icon: MdSupportAgent, title: "Expert Support" }
     ],
+    
+    // --- ABOUT SECTION ---
     aboutSection: {
-      subtitle: "ABOUT TUNNEL SOLUTIONS",
-      title: "Underground Construction Infrastructure",
-      desc1: "Advanced tunneling solutions for infrastructure projects, ensuring safety and efficiency.",
-      desc2: "Our product range supports contractors and project owners with reliable components designed for underground environments.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Certified safety equipment for tunnel infrastructure.",
+      subtitle: "ABOUT OUR TUNNEL SOLUTIONS",
+      title: "End-to-End Electrical Solutions for Tunnels",
+      desc1: "At Unique Infra & Sustainable Power Pvt. Ltd., we provide a comprehensive range of electrical products and solutions for all types of tunnel infrastructure projects. We maintain ready stock of essential products used in tunnel projects including power distribution systems, industrial lighting, cable management systems, automation panels, safety systems, earthing solutions, and control equipment required for reliable tunnel operations.",
+      desc2: "From power distribution, lighting, cable management to safety & automation systems — we ensure reliability, safety and performance in the most challenging environments.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "We supply all electrical components except civil & structural works.",
       image: tunnel
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Tunnel Lighting & Safety Products",
-        desc: "Safety inside tunnels depends on reliable lighting and early warning systems.",
-        icon: FiSun,
-        features: ["Emergency Luminaires", "Fire & Detection Systems"],
-        image: tunnel
-      },
-      {
-        title: "Ventilation Automation Supply",
-        desc: "Tunnel ventilation systems require precision automation to maintain air quality.",
-        icon: FiWind,
-        features: ["VFDs & Fan Controls", "Air Quality Sensors"],
-        image: tunnel
-      }
-    ],
+    
+    // --- 15 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY ELECTRICAL COMPONENTS USED IN TUNNEL PROJECTS",
+      title: "", 
+      items: [
+        { icon: FiZap, label: "LT & HT Switchgear" },
+        { icon: MdElectricMeter, label: "Transformers & Distribution Boards" },
+        { icon: MdOutlineCable, label: "Cables & Cable Accessories" },
+        { icon: FiGrid, label: "Cable Tray & Support Systems" },
+        { icon: MdOutlinePlumbing, label: "Conduit Pipes & Fittings" },
+        { icon: MdLightbulbOutline, label: "Tunnel Lighting Systems" },
+        { icon: FiSun, label: "Emergency & Exit Lighting" },
+        { icon: FiShield, label: "Fire Alarm & Detection Systems" },
+        { icon: MdSupportAgent, label: "Public Address Systems" },
+        { icon: FaShieldAlt, label: "Earthing & Lightning Protection" },
+        { icon: BsServer, label: "Control Panels & MCC / PCC" },
+        { icon: MdBatteryChargingFull, label: "UPS & Battery Systems" },
+        { icon: TbPropeller, label: "Ventilation & Jet Fan Control Panels" },
+        { icon: MdComputer, label: "SCADA & Automation Systems" },
+        { icon: BsSpeedometer, label: "Surge Protection & Isolation Systems" }
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS FOR TUNNEL PROJECTS",
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Cables & Cable Accessories",
+          image: tunnel, // Replace with your actual product cable image later
+          features: [
+            "HT & LT Power Cables",
+            "Control & Instrumentation Cables",
+            "Fire Survival Cables",
+            "Flexible & Armoured Cables",
+            "Cable Glands, Lugs & Ferrules",
+            "Jointing & Termination Kits"
+          ]
+        },
+        {
+          title: "Power Distribution & Control",
+          image: tunnel, // Replace with your actual distribution panel image later
+          features: [
+            "HT / LT Switchgear",
+            "MDB, SDB, DB Panels",
+            "MCC, PCC & APFC Panels",
+            "VFD Panels",
+            "Control & Relay Panels",
+            "Motor Starters & Drives"
+          ]
+        },
+        {
+          title: "Lighting & Safety Systems",
+          image: tunnel, // Replace with your actual safety light image later
+          features: [
+            "LED Tunnel Lighting",
+            "Emergency Lighting",
+            "Exit & Direction Signs",
+            "Fire Alarm Systems",
+            "Public Address Systems",
+            "CCTV & Surveillance Systems"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Starting a",
-      highlight: "Tunnel Project?",
-      desc: "We supply everything for underground environments.",
-      features: []
-    }
+    cta: null
   },
-  {
+ {
     id: "airport",
     image: airport,
     icon: FaPlane,
     title: "Airport",
     description: "Comprehensive airport infrastructure solutions enhancing operational efficiency and passenger experience.",
     badges: ["AVIATION", "CERTIFIED SUPPLY"],
-    heroDesc: "We supply specialized electrical, automation, and airfield lighting products to airport construction and expansion projects.",
-    competencies: [],
-    heroTagline: "Comprehensive Infrastructure for",
-    heroHighlight: "Airports",
-    heroSubtext: "Specialized electrical, automation, and airfield lighting products to airport projects.",
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solutions",
+    heroHighlight: "for Airports",
+    heroSubtext: "Providing End-to-End Electrical Solutions for Airport Infrastructure Projects.\nAt Unique Infra & Sustainable Power Pvt. Ltd., we supply a complete range of electrical products used in airport infrastructure projects.", //[cite: 15]
+    
+    // --- FEATURES BAR ---
     featuresBar: [
-      { icon: FaPlane, title: "AVIATION" },
-      { icon: FiAward, title: "CERTIFIED SUPPLY" }
+      { icon: FiShield, title: "End-to-End Electrical Solutions" },
+      { icon: FiAward, title: "Trusted Quality" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" },
+      { icon: MdSupportAgent, title: "Expert Support" }
     ],
+    
+    // --- ABOUT SECTION ---
     aboutSection: {
-      subtitle: "ABOUT AIRPORT SOLUTIONS",
-      title: "Airport Infrastructure Distribution",
-      desc1: "Comprehensive airport infrastructure solutions enhancing operational efficiency and passenger experience.",
-      desc2: "Our product range meets stringent aviation safety standards and supports contractors and airport authorities across India.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Certified aviation products for safe operations.",
+      subtitle: "ABOUT OUR AIRPORT SOLUTIONS",
+      title: "Complete Electrical Infrastructure for Airport Projects",
+      desc1: "At Unique Infra & Sustainable Power Pvt. Ltd., we provide design, supply, installation and commissioning support for electrical systems in airports.", 
+      desc2: "From power distribution to advanced lighting, safety systems and automation - we ensure reliable, efficient and future-ready airport infrastructure.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "We supply all electrical components used in airport projects.",
       image: airport
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Airfield Lighting Products",
-        desc: "Airfield lighting is a safety-critical requirement for every airport.",
-        icon: FiSun,
-        features: ["Runway & Taxiway Lights", "CCRs & Control Panels"],
-        image: airport
-      },
-      {
-        title: "Terminal Power Distribution",
-        desc: "Airport terminals require uninterrupted power for security, baggage, and passenger systems.",
-        icon: FiZap,
-        features: ["UPS & Transfer Switches", "Busbar & Distribution"],
-        image: airport
-      }
-    ],
+    
+    // --- 20 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN AIRPORT PROJECTS", //[cite: 15]
+      title: "", 
+      items: [
+        { icon: FiZap, label: "Power Distribution Panels (PDBs)" }, //[cite: 15]
+        { icon: MdElectricMeter, label: "Switchgear (ACB, MCCB, MCB)" }, //[cite: 15]
+        { icon: FiGrid, label: "Cable Trays & Supports" }, //[cite: 15]
+        { icon: MdOutlineCable, label: "Wires & Cables (HT, LT, Control)" }, //[cite: 15]
+        { icon: FaPlane, label: "Airfield Lighting Systems" }, //[cite: 15]
+        { icon: MdLightbulbOutline, label: "Runway & Taxiway Lighting" }, //[cite: 15]
+        { icon: FiSun, label: "Approach & PAPI Lighting Systems" }, //[cite: 15]
+        { icon: FaLightbulb, label: "High Mast Lighting Systems" }, //[cite: 15]
+        { icon: MdLightbulbOutline, label: "Terminal Lighting (LED Solutions)" }, //[cite: 15]
+        { icon: FaShieldAlt, label: "Emergency Exit & Safety Lights" }, //[cite: 15]
+        { icon: FiShield, label: "Fire Alarm & Detection Systems" }, //[cite: 15]
+        { icon: MdSupportAgent, label: "Public Address & Voice Evacuation" }, //[cite: 15]
+        { icon: MdBatteryChargingFull, label: "UPS & Battery Systems" }, //[cite: 15]
+        { icon: MdComputer, label: "ATC & Communication Systems" }, //[cite: 15]
+        { icon: FaShieldAlt, label: "Earthing & Lightning Protection" }, //[cite: 15]
+        { icon: BsBoxSeam, label: "Junction Boxes & DBs" }, //[cite: 15]
+        { icon: MdOutlinePlumbing, label: "Conduits & Cable Management" }, //[cite: 15]
+        { icon: FiSettings, label: "Control & Automation Panels" }, //[cite: 15]
+        { icon: BsSpeedometer, label: "Surge Protection Devices (SPD)" }, //[cite: 15]
+        { icon: FiTool, label: "Cable Glands, Lugs & Ferrules" } //[cite: 15]
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS FOR AIRPORT PROJECTS", //[cite: 15]
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Wire and Cable Accessories", //[cite: 15]
+          image: airport, 
+          features: [
+            "HT & Power Cables", //[cite: 15]
+            "Flexible & Armoured Cables", //[cite: 15]
+            "Control & Instrumentation Cables", //[cite: 15]
+            "Fire Survival Cables", //[cite: 15]
+            "Data & Communication Cables", //[cite: 15]
+            "Cable Glands & Accessories" //[cite: 15]
+          ]
+        },
+        {
+          title: "Power Distribution & Control System", //[cite: 15]
+          image: airport, 
+          features: [
+            "PDBs & DBs", //[cite: 15]
+            "MCCBs, MCBs & ACBs", //[cite: 15]
+            "Contactors & Relays", //[cite: 15]
+            "RCCB / ELCBs", //[cite: 15]
+            "VFDs & Soft Starters", //[cite: 15]
+            "SCADA & Automation Panels" //[cite: 15]
+          ]
+        },
+        {
+          title: "Lighting and Safety System", //[cite: 15]
+          image: airport, 
+          features: [
+            "Airfield & Runway Lighting", //[cite: 15]
+            "High Mast & Flood Lights", //[cite: 15]
+            "LED Terminal Lighting", //[cite: 15]
+            "Emergency Exit Lights", //[cite: 15]
+            "Fire Alarm Systems", //[cite: 15]
+            "Public Address Systems" //[cite: 15]
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    windOfferings: null,
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Developing an",
-      highlight: "Airport Facility?",
-      desc: "Trusted components for aviation projects.",
-      features: []
-    }
+    cta: null
   },
-  {
+{
     id: "power-transmission-distribution-substation",
     image: powerTransmission,
     icon: FaBolt,
     title: "Power Transmission",
     description: "Reliable power transmission, distribution, and substation solutions ensuring efficient energy delivery and grid stability.",
     badges: ["UTILITIES", "GRID SUPPLY"],
-    heroDesc: "We supply electrical and automation products for power transmission, distribution, and substation projects.",
-    competencies: [],
-    heroTagline: "Efficient Energy Delivery with",
-    heroHighlight: "Power Transmission",
-    heroSubtext: "Electrical and automation products for transmission, distribution, and substations.",
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solutions for", //[cite: 17]
+    heroHighlight: "Power Transmission", //[cite: 17]
+    heroSubtext: "Reliable. Efficient. Sustainable.\nSolutions for a Stronger Grid.", //[cite: 17]
+    
+    // --- FEATURES BAR ---
     featuresBar: [
-      { icon: FaBolt, title: "UTILITIES" },
-      { icon: FiGrid, title: "GRID SUPPLY" }
+      { icon: FiShield, title: "End-to-End Electrical Solutions" }, //[cite: 17]
+      { icon: FiAward, title: "Trusted Quality" }, //[cite: 17]
+      { icon: FiBox, title: "Ready Stock Availability" }, //[cite: 17]
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" }, //[cite: 17]
+      { icon: MdSupportAgent, title: "Expert Support" } //[cite: 17]
     ],
+    
+    // --- ABOUT SECTION ---
     aboutSection: {
-      subtitle: "ABOUT POWER SOLUTIONS",
-      title: "Grid Stability & Transmission Supply",
-      desc1: "Reliable power transmission, distribution, and substation solutions ensuring efficient energy delivery.",
-      desc2: "Our portfolio supports utilities, EPC contractors, and state electricity boards with reliable components for grid infrastructure development.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Distributing reliable products for grid infrastructure.",
+      subtitle: "ABOUT OUR POWER TRANSMISSION SOLUTIONS", //[cite: 17]
+      title: "Complete Electrical Infrastructure for Power Transmission Projects", //[cite: 17]
+      desc1: "At Unique Infra & Sustainable Power Pvt. Ltd., we provide a complete range of electrical products used in power transmission projects.", //[cite: 17]
+      desc2: "As an authorised distributor of leading brands, we maintain ready stock for timely dispatch across India, ensuring uninterrupted supply for critical transmission infrastructure.", //[cite: 17]
+      calloutIcon: BsClipboardCheck,
+      calloutText: "We supply all electrical components used in power transmission projects.", //[cite: 17]
       image: powerTransmission
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Substation Product Supply",
-        desc: "Substations form the backbone of the power grid and require highly reliable equipment.",
-        icon: FiGrid,
-        features: ["Transformers & Switchgear", "Protection Relays"],
-        image: powerTransmission
-      },
-      {
-        title: "Transmission Line Products",
-        desc: "Overhead transmission lines require durable and certified line hardware.",
-        icon: FiActivity,
-        features: ["Conductors & Earth Wire", "Insulators & Fittings"],
-        image: powerTransmission
-      }
-    ],
+    
+    // --- 18 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN POWER TRANSMISSION PROJECTS", //[cite: 17]
+      title: "", 
+      items: [
+        { icon: MdElectricMeter, label: "Power Transformers" }, //[cite: 17]
+        { icon: FiZap, label: "GIS & AIS Switchgear" }, //[cite: 17]
+        { icon: FaTools, label: "Transmission Line Hardware" }, //[cite: 17]
+        { icon: MdOutlineCable, label: "Conductors (ACSR, AAAC, AAC)" }, //[cite: 17]
+        { icon: FiSettings, label: "Insulators (Polymer & Porcelain)" }, //[cite: 17]
+        { icon: BsLightningChargeFill, label: "Surge Arresters & Lightning Protection" }, //[cite: 17]
+        { icon: MdSpeed, label: "CT, PT & VT" }, //[cite: 17]
+        { icon: FaBolt, label: "Isolators & Disconnectors" }, //[cite: 17]
+        { icon: BsServer, label: "Control & Relay Panels" }, //[cite: 17]
+        { icon: MdComputer, label: "SCADA & Automation Systems" }, //[cite: 17]
+        { icon: FaNetworkWired, label: "Communication Systems (PLCC, FO)" }, //[cite: 17]
+        { icon: MdCable, label: "OPGW & ADSS Cables" }, //[cite: 17]
+        { icon: FiTool, label: "Termination & Jointing Kits" }, //[cite: 17]
+        { icon: FaShieldAlt, label: "Earthing & Grounding Systems" }, //[cite: 17]
+        { icon: MdBatteryChargingFull, label: "Battery & DC Systems (Switchyard)" }, //[cite: 17]
+        { icon: FiGrid, label: "Cable Trays & Supports" }, //[cite: 17]
+        { icon: BsBoxSeam, label: "Junction Boxes & Enclosures" }, //[cite: 17]
+        { icon: FaCheckCircle, label: "Safety & Tools (Transmission)" } //[cite: 17]
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS FOR POWER TRANSMISSION PROJECTS", //[cite: 17]
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Wire & Cable Accessories", //[cite: 17]
+          image: powerTransmission, // Replace with your actual product cable image later
+          features: [
+            "HT & Power Cables", //[cite: 17]
+            "OPGW & ADSS Cables", //[cite: 17]
+            "Control & Instrumentation Cables", //[cite: 17]
+            "Underground & Earth Cables", //[cite: 17]
+            "Cable Lugs, Glands & Ferrules", //[cite: 17]
+            "Cable Jointing & Termination Kits" //[cite: 17]
+          ]
+        },
+        {
+          title: "Power Distribution & Control System", //[cite: 17]
+          image: powerTransmission, // Replace with your actual distribution panel image later
+          features: [
+            "PDBs & DBs", //[cite: 17]
+            "MCCBs, MCBs & ACBs", //[cite: 17]
+            "Relays & Protection Devices", //[cite: 17]
+            "VFDs & Soft Starters", //[cite: 17]
+            "Control & Relay Panels", //[cite: 17]
+            "SCADA & Automation Panels" //[cite: 17]
+          ]
+        },
+        {
+          title: "Transmission Line Solutions", //[cite: 17]
+          image: powerTransmission, // Replace with your actual tower/insulator image later
+          features: [
+            "Conductors (ACSR, AAC, AAAC)", //[cite: 17]
+            "Insulators & Disc Suspension", //[cite: 17]
+            "Tower Hardware & Fittings", //[cite: 17]
+            "Earthing & Lightning Protection", //[cite: 17]
+            "Line Accessories & Clamps", //[cite: 17]
+            "Stringing Tools & Equipment" //[cite: 17]
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    windOfferings: null,
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Strengthening the",
-      highlight: "Power Grid?",
-      desc: "Connect with us for reliable utility products.",
-      features: []
-    }
+    cta: null
   },
-  {
+ {
     id: "steel-industry",
     image: steel2,
     icon: FaIndustry,
     title: "Steel Industry",
     description: "Robust steel industry solutions tailored for modern manufacturing and construction needs.",
     badges: ["HEAVY INDUSTRY", "INDUSTRIAL DISTRIBUTOR"],
-    heroDesc: "We supply heavy-duty electrical, automation, and instrumentation products to steel manufacturing plants.",
-    competencies: [],
-    heroTagline: "Robust Solutions for the",
-    heroHighlight: "Steel Industry",
-    heroSubtext: "Heavy-duty electrical, automation, and instrumentation products for steel manufacturing.",
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solution for",
+    heroHighlight: "Steel industry",
+    heroSubtext: "Powering Steel industry with Complete industrial Electrical products.",
+    
+    // --- FEATURES BAR ---
     featuresBar: [
-      { icon: FaIndustry, title: "HEAVY INDUSTRY" },
-      { icon: FiTool, title: "INDUSTRIAL DISTRIBUTOR" }
+      { icon: FiShield, title: "Complete Electrical Solutions" },
+      { icon: FiAward, title: "Leading Brands" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Dispatch" },
+      { icon: MdSupportAgent, title: "Expert Support" }
     ],
+    
+    // --- ABOUT SECTION ---
     aboutSection: {
       subtitle: "ABOUT STEEL SOLUTIONS",
-      title: "Industrial Manufacturing Supply",
-      desc1: "Robust steel industry solutions tailored for modern manufacturing and construction needs.",
-      desc2: "Our distribution capabilities support integrated steel plants, mini steel mills, and rolling mills with components built to withstand extreme industrial conditions.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Built to withstand extreme industrial environments.",
+      title: "Powering Steel Industry with Complete Industrial Electrical Products",
+      desc1: "At Unique Infra & Sustainable Power Pvt. Ltd., we provide complete electrical solutions for the steel industry, supporting plants, rolling mills, and heavy industrial operations.",
+      desc2: "We are authorised distributors of leading brands and ensure ready stock availability for fast dispatch. From power distribution, automation, and control systems to lighting, safety, and cable management — we deliver reliable, efficient, and high-performance solutions for continuous steel plant operations.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "Delivering reliable, efficient, and high-performance solutions for continuous steel plant operations.",
       image: steel2
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Electric Furnace Power Products",
-        desc: "Electric arc and induction furnaces operate at extremely high currents and temperatures.",
-        icon: FiTool,
-        features: ["Furnace Cables & Busbars", "Electrode & Reactor Panels"],
-        image: steel2
-      },
-      {
-        title: "Steel Plant Automation Products",
-        desc: "Modern steel plants rely on sophisticated automation to control systems.",
-        icon: FiSettings,
-        features: ["Drives & Motor Controls", "PLCs & HMIs"],
-        image: steel2
-      }
-    ],
+    
+    // --- 18 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY COMPONENTS",
+      title: "", 
+      items: [
+        { icon: FiZap, label: "Power Distribution Panels (PDBs)" },
+        { icon: MdElectricMeter, label: "Switchgear (ACB, MCCB, MCB)" },
+        { icon: BsServer, label: "Transformers (Dry & Oil Cooled)" },
+        { icon: FiActivity, label: "VFDs & Soft Starters" },
+        { icon: FiTool, label: "Motors & Drives" },
+        { icon: FiGrid, label: "Busducts" },
+        { icon: BsBoxSeam, label: "Control & Relay Panels" },
+        { icon: MdComputer, label: "SCADA & Automation Systems" },
+        { icon: MdOutlineCable, label: "Cables & Wires (HT, LT, Control)" },
+        { icon: FiGrid, label: "Cable Trays & Supports" },
+        { icon: FaShieldAlt, label: "Earthing & Lightning Protection" },
+        { icon: MdBatteryChargingFull, label: "UPS & Battery Systems" },
+        { icon: MdLightbulbOutline, label: "Industrial Lighting (LED)" },
+        { icon: FiShield, label: "Fire Alarm & Detection Systems" },
+        { icon: FiSun, label: "Emergency Exit & Safety Lights" },
+        { icon: FaIndustry, label: "Crane Control & Festoon Systems" },
+        { icon: BsSpeedometer, label: "Instrumentation & Process Control" },
+        { icon: FaTools, label: "Tools & Accessories (Industrial)" }
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS",
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Wire & Cable Accessories",
+          image: steel2, // Replace with your actual product cable image later
+          features: [
+            "HT & Power Cables",
+            "Flexible & Armoured Cables",
+            "Control & Instrumentation Cables",
+            "Fire Survival Cables",
+            "Data & Communication Cables",
+            "Cable Glands & Accessories"
+          ]
+        },
+        {
+          title: "Power Distribution & Control System",
+          image: steel2, // Replace with your actual distribution panel image later
+          features: [
+            "PDBs & DBs",
+            "MCCBs, MCBs & ACBs",
+            "Contactors & Relays",
+            "RCCB / ELCBs",
+            "VFDs & Soft Starters",
+            "SCADA & Automation Panels"
+          ]
+        },
+        {
+          title: "Safety, Lighting & Automation",
+          image: steel2, // Replace with your actual safety/automation image later
+          features: [
+            "LED Highbay & Flood Lights",
+            "Fire Alarm Systems",
+            "Emergency Exit Lights",
+            "Crane & Hoist Systems",
+            "Process Control Solutions",
+            "PLC, DCS & SCADA Systems"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    windOfferings: null,
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Upgrading your",
-      highlight: "Steel Plant?",
-      desc: "Get heavy-duty industrial components.",
-      features: []
-    }
+    cta: null
   },
-  {
+{
     id: "metro&railways",
     image: metro,
     icon: FaTrain,
     title: "Metro & Railways",
     description: "Efficient metro and railways solutions designed to improve urban mobility and transportation infrastructure.",
     badges: ["URBAN TRANSIT", "INFRASTRUCTURE SUPPLY"],
-    heroDesc: "We supply electrical, automation, and signaling products to metro rail, highway, and railway infrastructure projects.",
-    competencies: [],
-    heroTagline: "Urban Mobility with",
-    heroHighlight: "Metro & Railways",
-    heroSubtext: "Electrical, automation, and signaling products for large transit networks.",
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solutions for", //[cite: 18]
+    heroHighlight: "Metro & Railway Industry", //[cite: 18]
+    heroSubtext: "Complete Electrical Infrastructure for Metro & Railway Projects.", //[cite: 18]
+    
+    // --- FEATURES BAR ---
     featuresBar: [
-      { icon: FaTrain, title: "URBAN TRANSIT" },
-      { icon: FiActivity, title: "INFRASTRUCTURE SUPPLY" }
+      { icon: FiShield, title: "End-to-End Electrical Solutions" },
+      { icon: FiAward, title: "Trusted Quality" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" },
+      { icon: MdSupportAgent, title: "Expert Support" }
     ],
+    
+    // --- ABOUT SECTION ---
     aboutSection: {
       subtitle: "ABOUT TRANSIT SOLUTIONS",
-      title: "Urban Transportation Infrastructure",
-      desc1: "Efficient metro and railways solutions designed to improve urban mobility.",
-      desc2: "Our distribution network supports EPC contractors and government agencies with quality-assured components for large-scale transit systems.",
-      calloutIcon: FaCheckCircle,
-      calloutText: "Supplying reliable components to power urban transit.",
+      title: "Complete Electrical Infrastructure for Metro & Railway Projects", //[cite: 18]
+      desc1: "We supply a comprehensive range of electrical products used in metro rail projects, railway stations, depots, traction substations, signalling, and trackside infrastructure.", //[cite: 18]
+      desc2: "Our solutions enhance operational efficiency, ensure passenger safety, reduce downtime, and support modern, future-ready rail networks with reliable electrical infrastructure and advanced automation systems.", //[cite: 18]
+      calloutIcon: BsClipboardCheck,
+      calloutText: "Supplying reliable components to power urban transit and railway networks.",
       image: metro
     },
-    keyComponents: { items: [] },
-    specialOfferings: null,
-    detailedSolutions: [
-      {
-        title: "Traction Power Equipment",
-        desc: "Metro and railway traction systems demand ultra-reliable electrical equipment.",
-        icon: FiZap,
-        features: ["Traction Cables & Switchgear", "Protection & Earthing"],
-        image: metro
-      }
-    ],
+    
+    // --- 15 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN METRO & RAILWAY PROJECTS", //[cite: 18]
+      title: "", 
+      items: [
+        { icon: MdOutlineCable, label: "Cable & Wires (HT, LT, Control)" }, //[cite: 18]
+        { icon: FaShieldAlt, label: "Earthing & Lightning Protection Systems" }, //[cite: 18]
+        { icon: MdBatteryChargingFull, label: "UPS & Battery Systems" }, //[cite: 18]
+        { icon: MdLightbulbOutline, label: "Emergency Exit & Safety Lights" }, //[cite: 18]
+        { icon: FaTrain, label: "Platform Screen Doors (PSD)" }, //[cite: 18]
+        { icon: MdSupportAgent, label: "Public Address & Communication Systems" }, //[cite: 18]
+        { icon: FiZap, label: "Traction & Power Cables" }, //[cite: 18]
+        { icon: BsBoxSeam, label: "PDBs & DBs" }, //[cite: 18]
+        { icon: FaNetworkWired, label: "Interlocking Systems" }, //[cite: 18]
+        { icon: MdCable, label: "Signalling & Communication Cables" }, //[cite: 18]
+        { icon: FiShield, label: "Fire Survival Cables" }, //[cite: 18]
+        { icon: MdComputer, label: "SCADA & Monitoring Systems" }, //[cite: 18]
+        { icon: FaBolt, label: "Overhead Electrification (OHE) Systems" }, //[cite: 18]
+        { icon: BsServer, label: "Control Panels & Automation Systems" }, //[cite: 18]
+        { icon: MdElectricMeter, label: "Substation Equipment" } //[cite: 18]
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS USED IN METRO & RAILWAY PROJECTS", //[cite: 18]
+      title: "",
+      desc: "",
+      cards: [
+        {
+          title: "Wire & Cable Systems", //[cite: 18]
+          image: metro, // Replace with your actual product cable image later
+          features: [
+            "HT & LT Power Cables", //[cite: 18]
+            "Control Cables", //[cite: 18]
+            "Signalling & Communication Cables", //[cite: 18]
+            "Fire Survival Cables", //[cite: 18]
+            "Traction Cables" //[cite: 18]
+          ]
+        },
+        {
+          title: "Power Distribution & Control System", //[cite: 18]
+          image: metro, // Replace with your actual distribution panel image later
+          features: [
+            "PDBs & DBs", //[cite: 18]
+            "MCCB, MCB & ACB", //[cite: 18]
+            "Control & Relay Panels", //[cite: 18]
+            "SCADA Systems", //[cite: 18]
+            "Automation Panels", //[cite: 18]
+            "VFDs & Drives" //[cite: 18]
+          ]
+        },
+        {
+          title: "Railway Infrastructure Systems", //[cite: 18]
+          image: metro, // Replace with your actual infrastructure image later
+          features: [
+            "Overhead Electrification (OHE) Equipment", //[cite: 18]
+            "Interlocking Systems", //[cite: 18]
+            "Traction Substation Equipment", //[cite: 18]
+            "Platform Screen Doors (PSD)", //[cite: 18]
+            "Emergency Lighting Systems", //[cite: 18]
+            "Public Address Systems" //[cite: 18]
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    windOfferings: null,
+    detailedSolutions: [],
     whyChooseUs: [],
     whereUsed: [],
-    cta: {
-      title: "Building",
-      highlight: "Transit Networks?",
-      desc: "Reach out for transit infrastructure products.",
-      features: []
-    }
+    cta: null
+  },
+  {
+    id: "ev-vehicle-industry",
+    image: evImage, // Make sure you imported this at the top!
+    icon: FiBatteryCharging,
+    title: "EV Vehicle Industry",
+    description: "Complete Electrical Infrastructure for EV Vehicles, Charging & Manufacturing Ecosystem.",
+    badges: ["E-MOBILITY", "INFRASTRUCTURE SUPPLY"],
+    
+    // --- HERO BANNER DATA ---
+    heroTagline: "Electrical Solutions for",
+    heroHighlight: "EV Vehicle Industry",
+    heroSubtext: "Complete Electrical Infrastructure for EV Vehicles, Charging & Manufacturing Ecosystem.",
+    
+    // --- FEATURES BAR ---
+    featuresBar: [
+      { icon: FiShield, title: "Complete Electrical Solutions" },
+      { icon: FiAward, title: "Trusted Quality" },
+      { icon: FiBox, title: "Ready Stock Availability" },
+      { icon: TbTruckDelivery, title: "Fast Delivery Across India" },
+      { icon: MdSupportAgent, title: "Expert Support" }
+    ],
+    
+    // --- ABOUT SECTION ---
+    aboutSection: {
+      subtitle: "ABOUT EV SOLUTIONS",
+      title: "Complete Electrical Infrastructure for EV Vehicles, Charging & Manufacturing Ecosystem",
+      desc1: "We supply a wide range of electrical products used in EV vehicles, battery systems, manufacturing plants, testing units, and EV infrastructure projects.",
+      desc2: "From power distribution and control systems to wiring harness components, safety systems, and automation solutions — we support reliable performance, efficiency, and safety across the entire electric vehicle ecosystem.",
+      calloutIcon: BsClipboardCheck,
+      calloutText: "Supporting reliable performance, efficiency, and safety across the entire EV ecosystem.",
+      image: evImage
+    },
+    
+    // --- 12 KEY COMPONENTS GRID ---
+    keyComponents: {
+      subtitle: "KEY COMPONENTS USED IN EV VEHICLE INDUSTRY",
+      title: "", 
+      items: [
+        { icon: MdOutlineCable, label: "EV Vehicle Wiring" },
+        { icon: FiZap, label: "Power Distribution Units (PDU)" },
+        { icon: FiBatteryCharging, label: "DC-DC Converters" },
+        { icon: MdOutlineCable, label: "HV & LV Cables" },
+        { icon: BsBoxSeam, label: "Control & Relay" },
+        { icon: FiCpu, label: "Motor Control Units (MCU)" },
+        { icon: FaShieldAlt, label: "Earthing & Protection Systems" },
+        { icon: MdSpeed, label: "Sensors & Monitoring Systems" },
+        { icon: FiSettings, label: "Connector & Terminal Systems" },
+        { icon: BsLightningChargeFill, label: "Charging Components" },
+        { icon: MdComputer, label: "Vehicle Control Electronics" },
+        { icon: FiShield, label: "Fuse & Protection Systems" }
+      ]
+    },
+    
+    // --- 3 ESSENTIAL PRODUCT CARDS ---
+    specialOfferings: {
+      subtitle: "ESSENTIAL PRODUCTS",
+      title: "Electrical Solutions for EV Vehicle Industry",
+      desc: "",
+      cards: [
+        {
+          title: "Wire & Cable Systems",
+          image: evImage, // Replace with your actual product cable image later
+          features: [
+            "High Voltage EV Cables",
+            "Low Voltage Control Cables",
+            "Battery Connection Cables",
+            "Shielded Communication Cables",
+            "Automotive Wiring Harness Components"
+          ]
+        },
+        {
+          title: "Power & Control Systems",
+          image: evImage, // Replace with your actual distribution/power image later
+          features: [
+            "DC-DC Converters",
+            "Power Distribution Units (PDU)",
+            "Vehicle Control Modules",
+            "Fuse & Protection Units"
+          ]
+        },
+        {
+          title: "Safety & Automation Systems",
+          image: evImage, // Replace with your actual safety/sensor image later
+          features: [
+            "Thermal Protection Systems",
+            "Vehicle Monitoring Sensors",
+            "Control Relays & Modules",
+            "Diagnostic & Testing Systems",
+            "Earthing & Electrical Protection Systems"
+          ]
+        }
+      ],
+      buttonText: "Request a Quote"
+    },
+    windOfferings: null,
+    detailedSolutions: [],
+    whyChooseUs: [],
+    whereUsed: [],
+    cta: null
   }
+
+
+
 ];
 
 export default IndustriesData;
