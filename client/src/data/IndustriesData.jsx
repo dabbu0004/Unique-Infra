@@ -226,8 +226,8 @@ const IndustriesData = [
       image: hydro
     },
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN HYDRO POWER SYSTEMS",
-      title: "", // Left blank as per your image design
+      subtitle: "COMPLETE HYDRO POWER SYSTEM COMPONENTS",
+      title: "Key Components Used in Hydro Power Systems",
       items: [
         { icon: BsServer, label: "Control Panels" },
         { icon: FiZap, label: "Switchgear" },
@@ -248,7 +248,7 @@ const IndustriesData = [
     },
     specialOfferings: {
       subtitle: "ESSENTIAL PRODUCTS FOR HYDRO PROJECTS",
-      title: "",
+      title: "Key Electrical Products Used in Hydro Power Projects",
       desc: "",
       cards: [
         {
@@ -319,8 +319,8 @@ const IndustriesData = [
       image: wind
     },
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN WIND POWER SYSTEMS",
-      title: "",
+      subtitle: "COMPLETE WIND ENERGY SYSTEM COMPONENTS",
+      title: "Key Components Used in Wind Energy Systems",
       items: [
         { icon: MdOutlineCable, label: "Wire & Cables" },
         { icon: MdComputer, label: "Industrial Automation" },
@@ -397,9 +397,11 @@ const IndustriesData = [
       title: "Ready for",
       highlight: "Wind Energy?",
       desc: "Partner with us for reliable wind farm components.",
-      features: [
-        { icon: FaCheckCircle, title: "Quality Assured" },
-        { icon: TbTruckDelivery, title: "Fast Delivery" }
+       features: [
+        { icon: FaCheckCircle, title: "Quality Products You Can Trust" },
+        { icon: TbTruckDelivery, title: "Pan India Delivery" },
+        { icon: MdSupportAgent, title: "Technical Support You Can Rely On" },
+        { icon: MdOutlineEnergySavingsLeaf, title: "Building a Greener Tomorrow" }
       ]
     }
   },
@@ -434,8 +436,8 @@ const IndustriesData = [
       image: dataCenter
     },
     keyComponents: {
-      subtitle: "KEY COMPONENTS",
-      title: "", // Left blank as per your clean design style
+      subtitle: "COMPLETE DATA CENTRE SYSTEM COMPONENTS",
+      title: "Key Components Used in Data Center", // Left blank as per your clean design style
       items: [
         { icon: MdOutlineCable, label: "Wire & Cables" },
         { icon: MdComputer, label: "Industrial Automation" },
@@ -558,8 +560,8 @@ const IndustriesData = [
     
     // --- 15 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY ELECTRICAL COMPONENTS USED IN TUNNEL PROJECTS",
-      title: "", 
+      subtitle: "cOMPLETE TUNNEL SYSTEM COMPONENTS",
+      title: "Key Components Used in Tunnel Projects", 
       items: [
         { icon: FiZap, label: "LT & HT Switchgear" },
         { icon: MdElectricMeter, label: "Transformers & Distribution Boards" },
@@ -582,8 +584,8 @@ const IndustriesData = [
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
       subtitle: "ESSENTIAL PRODUCTS FOR TUNNEL PROJECTS",
-      title: "",
-      desc: "",
+      title: "Key Electrical Products Used in Tunnel Projects",
+      desc: "we provide a comprehensive range of electrical products and solutions for all types of tunnel infrastructure projects.",
       cards: [
         {
           title: "Cables & Cable Accessories",
@@ -664,8 +666,8 @@ const IndustriesData = [
     
     // --- 20 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN AIRPORT PROJECTS", //[cite: 15]
-      title: "", 
+      subtitle: "COMPLETE AIRPORT ELECTRICAL SOLUTIONS", //[cite: 15]
+      title: "Key Components Used in Airport Projects", //[cite: 15]
       items: [
         { icon: FiZap, label: "Power Distribution Panels (PDBs)" }, //[cite: 15]
         { icon: MdElectricMeter, label: "Switchgear (ACB, MCCB, MCB)" }, //[cite: 15]
@@ -692,9 +694,9 @@ const IndustriesData = [
     
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
-      subtitle: "ESSENTIAL PRODUCTS FOR AIRPORT PROJECTS", //[cite: 15]
-      title: "",
-      desc: "",
+      subtitle: "COMPLETE AIRPORT ELECTRICAL SOLUTIONS", //[cite: 15]
+      title: "Key Electrical Products Used in Airport Projects", //[cite: 15]
+      desc: "We provide a comprehensive range of electrical products and solutions for all types of airport infrastructure projects.",
       cards: [
         {
           title: "Wire and Cable Accessories", //[cite: 15]
@@ -776,8 +778,8 @@ const IndustriesData = [
     
     // --- 18 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN POWER TRANSMISSION PROJECTS", //[cite: 17]
-      title: "", 
+      subtitle: "COMPLETE POWER TRANSMISSION SYSTEM COMPONENTS", //[cite: 17]
+      title: "Key Components Used in Power Transmission Projects", //[cite: 17]
       items: [
         { icon: MdElectricMeter, label: "Power Transformers" }, //[cite: 17]
         { icon: FiZap, label: "GIS & AIS Switchgear" }, //[cite: 17]
@@ -803,7 +805,7 @@ const IndustriesData = [
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
       subtitle: "ESSENTIAL PRODUCTS FOR POWER TRANSMISSION PROJECTS", //[cite: 17]
-      title: "",
+      title: "Key Electrical Products for Power Transmission Projects",
       desc: "",
       cards: [
         {
@@ -886,8 +888,8 @@ const IndustriesData = [
     
     // --- 18 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY COMPONENTS",
-      title: "", 
+      subtitle: "COMPLETE STEEL INDUSTRY SYSTEM COMPONENTS",
+      title: "Key Components Used in Steel Industry Projects", 
       items: [
         { icon: FiZap, label: "Power Distribution Panels (PDBs)" },
         { icon: MdElectricMeter, label: "Switchgear (ACB, MCCB, MCB)" },
@@ -912,9 +914,9 @@ const IndustriesData = [
     
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
-      subtitle: "ESSENTIAL PRODUCTS",
-      title: "",
-      desc: "",
+      subtitle: "ESSENTIAL PRODUCTS FOR STEEL INDUSTRY PROJECTS",
+      title: "Key Electrical Products for Steel Industry",
+      desc: "We provide a comprehensive range of electrical products and solutions for all types of steel industry projects.",
       cards: [
         {
           title: "Wire & Cable Accessories",
@@ -996,8 +998,8 @@ const IndustriesData = [
     
     // --- 15 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN METRO & RAILWAY PROJECTS", //[cite: 18]
-      title: "", 
+      subtitle: "COMPLETE METRO & RAILWAY SYSTEM COMPONENTS", //[cite: 18]
+      title: "Key Components Used in Metro & Railway Projects", //[cite: 18]
       items: [
         { icon: MdOutlineCable, label: "Cable & Wires (HT, LT, Control)" }, //[cite: 18]
         { icon: FaShieldAlt, label: "Earthing & Lightning Protection Systems" }, //[cite: 18]
@@ -1020,8 +1022,8 @@ const IndustriesData = [
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
       subtitle: "ESSENTIAL PRODUCTS USED IN METRO & RAILWAY PROJECTS", //[cite: 18]
-      title: "",
-      desc: "",
+      title: "Essential Electrical Products for Metro & Railway Projects",
+      desc: "We provide a comprehensive range of electrical products and solutions for all types of metro and railway projects.",
       cards: [
         {
           title: "Wire & Cable Systems", //[cite: 18]
@@ -1102,8 +1104,8 @@ const IndustriesData = [
     
     // --- 12 KEY COMPONENTS GRID ---
     keyComponents: {
-      subtitle: "KEY COMPONENTS USED IN EV VEHICLE INDUSTRY",
-      title: "", 
+      subtitle: "COMPLETE EV VEHICLE SYSTEM COMPONENTS",
+      title: "Key Components Used in EV Vehicle Industry", 
       items: [
         { icon: MdOutlineCable, label: "EV Vehicle Wiring" },
         { icon: FiZap, label: "Power Distribution Units (PDU)" },
@@ -1122,9 +1124,9 @@ const IndustriesData = [
     
     // --- 3 ESSENTIAL PRODUCT CARDS ---
     specialOfferings: {
-      subtitle: "ESSENTIAL PRODUCTS",
-      title: "Electrical Solutions for EV Vehicle Industry",
-      desc: "",
+      subtitle: "ESSENTIAL PRODUCTS FOR EV VEHICLE INDUSTRY",
+      title: "Key Electrical Products for EV Vehicle Industry",
+      desc: "We provide a comprehensive range of electrical products and solutions for all types of EV vehicle industry projects.",
       cards: [
         {
           title: "Wire & Cable Systems",
