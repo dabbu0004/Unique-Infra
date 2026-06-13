@@ -253,26 +253,49 @@ const EachSegmentHero = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {currentSegment.specialOfferings.cards.map((card, idx) => (
-              <div key={idx} className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-gray-200 flex flex-row p-5 md:p-6 transition-shadow items-stretch">
-                <div className="w-[35%] shrink-0 pr-4 flex justify-center items-center">
-                  <img src={card.image} alt={card.title} className="w-full h-auto object-contain max-h-48 drop-shadow-sm" />
-                </div>
-                <div className="w-[65%] flex flex-col justify-center">
+              <div 
+                key={idx} 
+                className="bg-white rounded-2xl shadow-sm hover:shadow-md border border-gray-200 flex flex-col p-5 md:p-6 transition-shadow h-full"
+              >
+                
+                {/* 1. TOP SECTION: Title and Green Line at the top left */}
+                <div className="w-full mb-5">
                   <h3 className="text-xl md:text-2xl font-bold text-[#004068] mb-2 leading-tight">
                     {card.title}
                   </h3>
-                  <div className="w-6 h-[2px] bg-[#5c903a] mb-4"></div>
-                  <ul className="space-y-3">
-                    {card.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-700 font-medium">
-                        <svg className="w-4 h-4 mt-[2px] text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path></svg>
-                        <span className="leading-tight">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="w-8 h-[2px] bg-[#5c903a]"></div>
                 </div>
+
+                {/* 2. BOTTOM SECTION: Image on Left, List on Right */}
+                <div className="flex flex-row flex-1">
+                  
+                  {/* Image container (shifted slightly lower with pt-2) */}
+                  <div className="w-[35%] shrink-0 pr-4 flex justify-center items-start pt-2">
+                    <img 
+                      src={card.image} 
+                      alt={card.title} 
+                      className="w-full h-auto object-contain max-h-32 drop-shadow-sm rounded" 
+                    />
+                  </div>
+
+                  {/* List container */}
+                  <div className="w-[65%] flex flex-col justify-start">
+                    <ul className="space-y-3">
+                      {card.features.map((feat, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-700 font-medium">
+                          <svg className="w-4 h-4 mt-[2px] text-gray-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
+                          </svg>
+                          <span className="leading-tight">{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                </div>
+
               </div>
             ))}
           </div>

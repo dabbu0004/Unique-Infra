@@ -184,7 +184,7 @@ const IndustriesData = [
     ],
 
     cta: {
-      title: "Ready to Go Solar?",
+      title: "Ready to ",
       highlight: "Go Solar?",
       desc: "Get our solar product solutions from a trusted supplier. We supply everything you need for solar projects - except structure - making us your one-stop solution partner.",
       features: [

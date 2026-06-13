@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import EachSegmentHero from "../components/segments/EachSegmentHero";
 import OurClients from "../components/home/Clients";
 import ContactHero from "../components/contact/ContactHero";
+import CtaBanner from "../components/CtaBanner";
 
 const EachSegmentPage = () => {
   const location = useLocation();
@@ -17,6 +18,7 @@ const EachSegmentPage = () => {
     <>
       <EachSegmentHero />
       <OurClients />
+      <CtaBanner />
       <ContactHero />
     </>
   );
